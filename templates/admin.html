@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+<nav class="admin-navbar bg-white">
+    <div class="admin-nav-heading">
+        <h2>Disease Prediction</h2>
+    </div>
+    <a class="admin-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <div class="admin-nav-links">
+        <ul>
+            <li><a href="" style="background-color: #484c4ba3;opacity: 0.4;border-radius: 0.4rem;">Home</a></li>
+            <li><a href="/healthcare/view_doctors?id={{data.hc_id}}">View Doctors</a></li>
+            <li><a href="/healthcare/view_patients?id={{data.hc_id}}"> View Patients</a></li>
+            <li>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Specialist
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="/healthcare/weight?id={{data.hc_id}}">Weight</a>
+                  <a class="dropdown-item" href="/healthcare/height?id={{data.hc_id}}">Height</a>
+                  <a class="dropdown-item" href="/healthcare/gluc?id={{data.hc_id}}">Glucose</a>
+                  <a class="dropdown-item" href="/healthcare/cholestrol?id={{data.hc_id}}">Cholestrol</a>
+                  <a class="dropdown-item" href="/healthcare/ap_hi?id={{data.hc_id}}">AP HI</a>
+                  <a class="dropdown-item" href="/healthcare/ap_lo?id={{data.hc_id}}">AP LO</a>
+                  <a class="dropdown-item" href="/healthcare/smoke?id={{data.hc_id}}">Smoke</a>
+                  <a class="dropdown-item" href="/healthcare/alco?id={{data.hc_id}}">Alcohol</a>
+                </div>
+              </div>
+            </li>
+            <li><a href="/healthcare/create_profile?id={{data.hc_id}}"> Create Profile</a></li>
+            <li><a href="/healthcare/pair?id={{data.hc_id}}"> Pair Doctor</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="hc-body-div">
+    <h2>{{data.hc_name}} Healthcare!</h2>
+</div>
+
+{{super()}}
+{% endblock %}

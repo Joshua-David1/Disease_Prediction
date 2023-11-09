@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="hc-home-div bg-white">
+<img class="hc-logo" src="https://cdn.dribbble.com/users/4506667/screenshots/14492641/heart_disease_prediction_logo2_.png">
+
+<h2 style="text-align: center;font-weight: 800;">
+    HEALTHCARE HOME
+</h2>
+
+<div class="home-redirects">
+    <a href="/healthcare/login" class="btn btn-info">Login</a>
+    <br>
+    <a href="/healthcare/register" class="btn btn-info">Register</a>
+</div>
+</div>
+
+
+{{super()}}
+{% endblock %}

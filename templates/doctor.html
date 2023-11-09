@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<nav class="admin-navbar">
+    <div class="admin-nav-heading">
+        <h2>Disease Prediction</h2>
+    </div>
+    <a class="admin-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <div class="admin-nav-links">
+        <ul>
+            <li><a href="" style="background-color: #484c4ba3;opacity: 0.4;border-radius: 0.4rem;">Home</a></li>
+            <li><a href="/healthcare/view_my_patients?email={{data.email}}"> View Patients</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="hc-body-div">
+    <h2>Welcome {{data.doc_name}} to {{data.hc_name}} Healthcare! Portal</h2>
+</div>
+
+{{super()}}
+{% endblock %}

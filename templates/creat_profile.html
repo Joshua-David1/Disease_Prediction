@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="hc-logreg-parent bg-white">
+    <img class="hc-logo" src="https://cdn.dribbble.com/users/4506667/screenshots/14492641/heart_disease_prediction_logo2_.png">
+    
+    <h2 style="text-align: center;font-weight: 800;">
+        Create Profile
+    </h2>
+    
+    <div class="hc-logreg-div" style="text-align: center;">
+
+        <form action="/healthcare/create_profile" method="post">
+            <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name" name="name">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Age" name="age">
+              </div>
+              <div class="form-group">
+                <select class="form-select form-control" aria-label="form-select-sm example" name="designation">
+                    <option selected>Doctor/Patient/Specialist</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="patient">Patient</option>
+                    <option value="height">Height Specialist</option>
+                    <option value="weight">Weight Specialist</option>
+                    <option value="gluc">Glucose Specialist</option>
+                    <option value="cholestrol">Cholestrol Specialist</option>
+                    <option value="ap_hi">Systolic blood pressure Specialist</option>
+                    <option value="ap_lo">Diastolic blood pressure Specialist</option>
+                    <option value="smoke">Smoke Specialist</option>
+                    <option value="alco">Alcohol Specialist</option>
+                  </select>
+              </div>
+              <input type="hidden" value="{{hc_id}}" name="hc_id">
+                <button class="btn btn-info">Create</button>
+        </form>
+        <p style="margin-top: 1rem;">Go back! <a href="/healthcare/admin?id={{hc_id}}">Back</a></p>
+    </div>
+</div>
+
+
+{{super()}}
+{% endblock %}

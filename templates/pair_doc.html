@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="hc-logreg-parent bg-white">
+    <img class="hc-logo" src="https://cdn.dribbble.com/users/4506667/screenshots/14492641/heart_disease_prediction_logo2_.png">
+    
+    <h2 style="text-align: center;font-weight: 800;">
+        Pair Patient
+    </h2>
+    
+    <div class="hc-logreg-div" style="text-align: center;">
+
+        <form action="/healthcare/pair" method="post">
+              <div class="form-group">
+                <select class="form-select form-control" aria-label="form-select-sm example" name="patient">
+                    <option selected>Select Patient</option>
+                    {% for patient in data.patients %}
+                    <option value="{{patient.id}}">{{patient.name}}</option>
+                    {% endfor %}
+                </select>
+                <select class="form-select form-control" aria-label="form-select-sm example" name="doctor">
+                    <option selected>Select Doctor</option>
+                    {% for doc in data.doctors %}
+                    <option value="{{doc.id}}">{{doc.name}}</option>
+                    {% endfor %}
+                </select>
+              </div>
+              <input type="hidden" value="{{data.id}}" name="id">
+                <button class="btn btn-info">Create</button>
+        </form>
+        <p style="margin-top: 1rem;">Go back! <a href="/healthcare/admin?id={{data.id}}">Back</a></p>
+    </div>
+</div>
+
+
+{{super()}}
+{% endblock %}

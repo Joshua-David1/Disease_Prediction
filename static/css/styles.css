@@ -6,4 +6,116 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    padding: 2rem;
+}
+
+.home-redirects{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.home-redirects a{
+    padding:1rem
+}
+
+.hc-home-div{
+    padding: 1rem;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 450px;
+    border-radius: 1.2rem;
+}
+
+.hc-logo{
+    width: 100px;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+
+.hc-logreg-parent{
+    padding: 1rem;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    border-radius: 1.2rem;
+}
+
+.hc-logreg-div{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+}
+
+
+.admin-navbar{
+    background-color: #F6F8FA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.admin-nav-heading{
+    font-family: 'Yeseva One'
+}
+
+.admin-nav-heading h2{
+    margin: 0;
+}
+
+.admin-nav-links ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+.admin-nav-links li{
+    display: block;
+    padding: 1rem 1.2rem;
+    text-decoration: none;
+}
+
+.admin-nav-links li a{
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    height: 100%;
+}
+
+
+.admin-hamburger{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    display: none;
+    flex-direction: column;
+    width: 30px;
+    height: 23px;
+    justify-content: space-between;
+}
+
+.admin-hamburger span{
+    height: 4px;
+    width: 100%;
+    display: block;
+    background-color: black;
+}
+
+
+.hc-body-div{
+    padding: 1rem;
 }
