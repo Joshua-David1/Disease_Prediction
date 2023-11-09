@@ -23,5 +23,29 @@
     <h2>Welcome {{data.doc_name}} to {{data.hc_name}} Healthcare! Portal</h2>
 </div>
 
+
+<div style="margin-top: 2rem;">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Patient Id</th>
+            <th scope="col">Patient Name</th>
+            <th scope="col">Value</th>
+            <th scope="col">Test Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for patient in data.display_patients%}
+          <tr>
+            <td>{{patient.id}}</td>
+            <td>{{patient.patient_name}}</td>
+            <td>{{patient.test_value}}</td>
+            <td>{{patient.test_name}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</div>
+
 {{super()}}
 {% endblock %}

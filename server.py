@@ -684,6 +684,13 @@ def healthcare_doctor():
         "doc_name": User.query.filter_by(email=email).first().name,
         "email": email,
     }
+
+    id = User.query.filter_by(email=email).first().id
+    data_map = get_doc_pair(id)
+    new_data = []
+    for key, val in data_map.items():
+        new_data.extend(TestNewData.query.filter_by(patient_id=key).all())
+    data["display_patients"] = new_data
     return render_template("doctor.html", data=data)
 
 
